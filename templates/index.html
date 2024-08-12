@@ -1,0 +1,35 @@
+<!DOCTYPE html>  
+<html lang="es">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    <title>Conversor de Divisas</title>  
+</head>  
+<body>  
+    <h1>Conversor de Divisas</h1>  
+    <form method="POST">  
+        <input type="number" name="amount" required>  
+        <select name="from_currency" required>  
+            <option value="USD">USD</option>  
+            <option value="EUR">EUR</option>  
+            <option value="GBP">GBP</option>  
+            <option value="PYG">PYG</option>
+            
+        </select>  
+          a
+        <select name="to_currency" required>  
+            <option value="USD">USD</option>  
+            <option value="EUR">EUR</option>  
+            <option value="GBP">GBP</option>
+            <option value="PYG">PYG</option>  
+            
+        </select>  
+        <button type="submit">Convertir</button>  
+    </form>  
+    
+    {% if conversion_result is not none %}  
+        <h2>Resultado: {{ conversion_result }}</h2> 
+        <p>Última actualización del valor de cambio: {{ last_updated }}</p>
+    {% endif %}  
+</body>  
+</html>
